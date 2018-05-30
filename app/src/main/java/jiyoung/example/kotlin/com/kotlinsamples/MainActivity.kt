@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import com.google.android.gms.ads.AdRequest
 import jiyoung.example.kotlin.com.kotlinsamples.network.NetworkCheckReceiver
 import jiyoung.example.kotlin.com.kotlinsamples.network.NetworkModel
 import jiyoung.example.kotlin.com.kotlinsamples.network.NetworkModel.setStatus
@@ -15,6 +16,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
+        adView.loadAd(adRequest)
 
         val networkModel = NetworkModel
         val observer = NetworkObserver(this)
@@ -37,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                     , NetworkCheckReceiver.NETWORK_STATE_DISCONNECTING
                     , NetworkCheckReceiver.NETWORK_STATE_DISCONNECTED -> setStatus("mobile", false)
             }
-            networkModel.execute()
+            //networkModel.execute()
         })
 
         networkModel.execute()

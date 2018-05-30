@@ -1,4 +1,4 @@
-package jiyoung.example.kotlin.com.kotlinsamples
+package jiyoung.example.kotlin.com.nulltest
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -12,14 +12,5 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
-    }
-
-    fun setInfo(a: String, b: String?) {
-        System.out.println(a + b)
-    }
-
-    @Test
-    fun test() {
-        setInfo("a", null)
     }
 }
