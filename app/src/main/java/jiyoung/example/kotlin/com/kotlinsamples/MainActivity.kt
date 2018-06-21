@@ -1,5 +1,6 @@
 package jiyoung.example.kotlin.com.kotlinsamples
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -46,17 +47,10 @@ class MainActivity : AppCompatActivity() {
 
         networkModel.execute()
 
-        button1.setOnClickListener(View.OnClickListener { view -> nullTest(this.setViewText(null)) })
+        BtnLapism.setOnClickListener { view -> startActivity(Intent(this@MainActivity, ActLapism::class.java)) }
 
     }
 
-    private fun setViewText(text: String?) : String?{
-        return text
-    }
-
-    private fun nullTest(message: String?) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
 
 
 }

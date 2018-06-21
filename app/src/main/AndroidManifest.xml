@@ -30,6 +30,8 @@
             android:label="@string/title_activity_navi"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".ActLapism">
+        </activity>
     </application>
 
 </manifest>
