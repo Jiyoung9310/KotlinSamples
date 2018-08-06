@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="jiyoung.example.kotlin.com.kotlinsamples">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -24,13 +25,27 @@
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent"/>
+            android:theme="@android:style/Theme.Translucent">
+        </activity>
         <activity
             android:name=".NaviActivity"
             android:label="@string/title_activity_navi"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".ActLapism">
+        </activity>
+        <activity android:name=".ActMancj"/>
+        <activity android:name=".filter.ActFilter">
+        </activity>
+        <activity android:name=".ActSearch">
+        </activity>
+        <activity
+            android:name=".ActQRReader"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name=".ActZxing">
         </activity>
     </application>
 

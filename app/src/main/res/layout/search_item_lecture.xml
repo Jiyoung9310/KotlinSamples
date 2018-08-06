@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_view_item"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="start">
+
+
+    <TextView
+        android:id="@+id/textView_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="14dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/btnDelete"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textIsSelectable="false"
+        android:textColor="#4F4F4F"
+        android:textSize="@dimen/search_text_small" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_ic_close_gray_24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+</RelativeLayout>

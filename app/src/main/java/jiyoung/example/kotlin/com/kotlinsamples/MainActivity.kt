@@ -3,9 +3,8 @@ package jiyoung.example.kotlin.com.kotlinsamples
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
-import android.widget.Toast
 import com.google.android.gms.ads.AdRequest
+import jiyoung.example.kotlin.com.kotlinsamples.filter.ActFilter
 import jiyoung.example.kotlin.com.kotlinsamples.network.NetworkCheckReceiver
 import jiyoung.example.kotlin.com.kotlinsamples.network.NetworkModel
 import jiyoung.example.kotlin.com.kotlinsamples.network.NetworkModel.setStatus
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
-        adView.loadAd(adRequest)
+        avBottom.loadAd(adRequest)
 
         val networkModel = NetworkModel
         val observer = NetworkObserver(this)
@@ -48,7 +47,9 @@ class MainActivity : AppCompatActivity() {
         networkModel.execute()
 
         BtnLapism.setOnClickListener { view -> startActivity(Intent(this@MainActivity, ActLapism::class.java)) }
-
+        BtnMancj.setOnClickListener { view -> startActivity(Intent(this@MainActivity, ActMancj::class.java)) }
+        BtnYalantis.setOnClickListener { startActivity(Intent(this@MainActivity, ActFilter::class.java)) }
+        BtnQR.setOnClickListener { startActivity(Intent(this@MainActivity, ActQRReader::class.java)) }
     }
 
 

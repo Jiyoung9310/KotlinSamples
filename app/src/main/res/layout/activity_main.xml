@@ -22,14 +22,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="lapism searchBar"
-        ads:layout_constraintBottom_toBottomOf="@id/textView1"
+        ads:layout_constraintBottom_toTopOf="@id/textView1"
         ads:layout_constraintLeft_toLeftOf="parent"
         ads:layout_constraintRight_toRightOf="parent"
         ads:layout_constraintTop_toTopOf="parent"
         />
 
+    <Button
+        android:id="@+id/BtnMancj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mancj searchBar"
+        ads:layout_constraintBottom_toTopOf="@id/BtnYalantis"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/BtnLapism"
+        />
+
+    <Button
+        android:id="@+id/BtnYalantis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yalantis Filter"
+        ads:layout_constraintBottom_toTopOf="@id/textView1"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/BtnMancj"
+        />
+
+    <Button
+        android:id="@+id/BtnQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QRcode Reader"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/textView1"
+        />
+
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
+        android:id="@+id/avBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         ads:layout_constraintLeft_toLeftOf="parent"
