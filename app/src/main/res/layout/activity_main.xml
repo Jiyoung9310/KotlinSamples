@@ -60,6 +60,16 @@
         ads:layout_constraintTop_toBottomOf="@id/textView1"
         />
 
+    <Button
+        android:id="@+id/BtnGetnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Getnumber"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/BtnQR"
+        />
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/avBottom"
         android:layout_width="wrap_content"

@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         BtnMancj.setOnClickListener { view -> startActivity(Intent(this@MainActivity, ActMancj::class.java)) }
         BtnYalantis.setOnClickListener { startActivity(Intent(this@MainActivity, ActFilter::class.java)) }
         BtnQR.setOnClickListener { startActivity(Intent(this@MainActivity, ActQRReader::class.java)) }
+        BtnGetnumber.setOnClickListener { startActivity(Intent(this@MainActivity, ActGetNumber::class.java)) }
     }
 
 

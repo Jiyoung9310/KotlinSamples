@@ -27,8 +27,9 @@ class ActQRReader : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         tv_result.text = result.contents
-
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(tv_result.text as String?))
-        startActivity(intent)
+        if(result.contents.startsWith("http")) {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(tv_result.text as String?))
+            startActivity(intent)
+        }
     }
 }
