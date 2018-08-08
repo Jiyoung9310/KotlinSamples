@@ -20,4 +20,25 @@
         app:layout_constraintTop_toBottomOf="@id/btn_getnumber"
         android:text="내 번호는 "/>
 
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름"
+        app:layout_constraintTop_toBottomOf="@id/tv_number"/>
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="번호"
+        app:layout_constraintTop_toBottomOf="@id/et_name"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        app:layout_constraintTop_toBottomOf="@id/et_number"/>
+
 </android.support.constraint.ConstraintLayout>
